@@ -42,6 +42,23 @@ print('I'm Meiqi!')
 
 > **Note:** *It's allowed to specify the language by following the language type after the fisrt \`\`\`. For example, \`\`\`md, \`\`\`python, \`\`\`bash, \`\`\`json, etc.*
 
+## Table
+The syntax to create a table is:
+
+```md
+| Header 1 | Header 2 | Header 3 |
+| :--- | :---: | ---: | 
+| cell A | cell B | cell C |
+| cell D | cell E | cell F |
+|left alignment | central alignment | right alignment |
+```
+It will be like:
+| Header 1 | Header 2 | Header 3 |
+| :--- | :---: | ---: |
+| cell A | cell B | cell C |
+| cell D | cell E | cell F |
+|left alignment | center alignment | right alignment |
+
 ## Link
 The syntax to create a link is:
 ```md

@@ -29,3 +29,24 @@ Commit the changes in the Staging Area to git:
 
 **`git commit -m "message"`**
 
+## 5. `git restore`
+This command can revert the files to a previous state, two ways to use it:
+
+- **`git restore <file name>`**:
+
+  undo modifications in the **working directory**, revert the file's content to match the state of the last commit(HEAD).
+
+> *Note: Olny works on **tracked files**.*
+
+- **`git restore --staged <file name>`**:
+
+  remove files from **staging area**, revert the files back from "staged" to "unstaged".
+
+
+**💡 Pro Tips:**
+
+- To restore **all** modified files in the current directory:  
+  **`git restore .`**
+- To unstage **everything**:  
+  **`git restore --staged .`**
+
