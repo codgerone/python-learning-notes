@@ -42,7 +42,7 @@ git remote add Python_learning_notes https://github.com/codgerone/Python_learnin
 git remote add Learning_notes https://github.com/codgerone/Learning_notes.git
 ```
 
-> 💡**强烈建议：** *在 Git 中每个远程仓库的别名，就根要建立连接的远程仓库名称起成一样就行，这样不会错乱。不要起名 orgin。*
+> 💡**强烈建议：** *在 Git 中每个远程仓库的别名，就根要建立连接的远程仓库名称起成一样就行，这样不会错乱。不要起名 orgin (origin是默认的远端仓库别名) 。*
 
 - ### 建立联系后可用的“检查”命令：
 ```bash
@@ -81,7 +81,22 @@ git push <远程仓库别名> <要传送的本地分支名>
 ```bash
 git push python_learning_notes main
 ```
-检查当前分支名称的命令：
-```bash
-git branch
+
+## 4. `git push`的本质
+
+💡 `git push`的 **本质** 是把远端分支指针，从它现在的位置，推进到本地分支指针的位置；如果中间缺了对象，就补齐。
+
+即对照以下两个对象（***comparison***），并补齐差集，对照的两个对象为：
+```md
+本地分支的最新提交（HEAD / 分支指针）
+refs/heads/main
+vs
+远端对应分支的最新提交（远端分支跟踪指针）
+refs/remotes/origin/main
 ```
+
+最终，该命令会把本地分支上 “尚未推送到远程仓库的所有提交（commits）” 一次性推送推送上去，而不是只推送本次commit的内容。
+
+> **注意：** 远端分支跟踪指针不是远端仓库里的指针本体，而只是本地保存的“远端状态快照”，可由`git fetch`把本地的远端分支跟踪指针更新到与远端仓库的本体指针一致的位置。
+
+## 
