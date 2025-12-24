@@ -5,7 +5,7 @@ This repository contains my learning notes on Python and related tools.
 ## Index
 
 ### Markdown
-- [Tutorial for markdown syntax](Markdown/tutorial_for_markdown_syntax.md)
+- [Tutorial for markdown syntax](Markdown/Tutorial_for_markdown_syntax.md)
 
 ### Git & GitHub
 - [How to crate a new repository](Git/How_to_create_a_new_repository.md)
