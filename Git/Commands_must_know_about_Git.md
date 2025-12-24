@@ -24,12 +24,7 @@ This command can upload changes to the ***Staging Area***, here are three ways t
   
   add the whole directory.
 
-## 4. `git commit`
-Commit the changes in the Staging Area to git:
-
-**`git commit -m "message"`**
-
-## 5. `git restore`
+## 4. `git restore`
 This command can revert the files to a previous state, two ways to use it:
 
 - **`git restore <file name>`**:
@@ -50,3 +45,52 @@ This command can revert the files to a previous state, two ways to use it:
 - To unstage **everything**:  
   **`git restore --staged .`**
 
+## 5. `git commit`
+Commit the changes in the Staging Area to git:
+
+**`git commit -m "message"`**
+
+## 6. `git remote`
+
+- **`git remote add <remote_name> <remote_repo_URL>`**
+- **`git remote remove <remote_name>`**
+- **`git remote rename <old_name> <new_name>`**
+- **`git remote set-url <remote_name> <new_URL>`**
+- **`git remote -v`**
+
+## 7. `git branch`
+- **`git branch`**:
+
+  check the local branch
+
+- **`git branch -vv`**:
+
+  check the current upstream (the default remote branch connecting to the local branch)
+
+- **`git branch -u <remote_name>/<remote_branch>`**:
+
+  set the upstream to <remote_name>/<remote_branch>
+
+## 8. `git push`
+- **`git push`**:
+
+  *euqal to `git push <upstream_remote> <local_branch>`*
+- **`git push <remote> <local_branch>`**:
+
+  *for example: `git push Learning_notes main`*
+
+- **`git push -u <remote> <local_branch>`**:
+
+  *set the upstream and push at the same time, for example:*
+
+  *`git push -u python_learning_notes main`*
+
+## 9. `git pull`
+
+- **`git pull`**:
+
+   *equal to `git pull <upstream_remote> <local_branch>`* 
+
+- **`git pull <remote> <local_branch>`**
+
+## 10. `git fetch`

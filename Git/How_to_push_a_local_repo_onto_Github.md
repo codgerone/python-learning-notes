@@ -99,4 +99,16 @@ refs/remotes/origin/main
 
 > **注意：** 远端分支跟踪指针不是远端仓库里的指针本体，而只是本地保存的“远端状态快照”，可由`git fetch`把本地的远端分支跟踪指针更新到与远端仓库的本体指针一致的位置。
 
-## 
+## 5. 多远端（multiple remotes）场景下的 Upstream
+
+**Upstream（上游分支）** 是当前本地分支默认对接的远端分支。
+
+直接运行 **`git push`, `git pull`, `git fetch`** 时，都是在和当前的 Upstream 互动。
+
+**关于 Upstream 必须知道的两个命令：**
+- `git branch -vv`：
+
+    查询目前的 Upstream
+- `git branch -u <remote>/<remote_branch>`：
+
+    更改 Upstream
