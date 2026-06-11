@@ -59,6 +59,32 @@ Commit the changes in the Staging Area to git:
 - **`git remote -v`**
 
 ## 7. `git branch`
+
+- 查看分支
+`git branch`
+带*标记的为当前所在分支
+
+- 创建分支
+`git branch xxx`
+
+- 切换分支
+`git switch xxx`
+
+- 创建并切换
+`git switch -c xxx`
+
+- 查看所有分支
+`git branch -a`
+
+- 推送分支
+`git push -u origin xxx`
+
+- 合并分支
+`git merge xxx`
+
+- 删除分支
+`git branch -d xxx`
+
 - **`git branch`**:
 
   check the local branch
